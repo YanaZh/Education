@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+    <meta charset=utf-8">
+    <title>Жомир Яна - официальный сайт</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.open-popup').on('click', function(){
+                $('.popup-container').css('display','flex');
+            });
+            $('.close-button').on('click', function(){
+                $('.popup-container').css('display','none');
+            });
+        });
+    </script>
+    <style> 
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        html, body {
+            margin: 0;
+        }
+        header {
+            height: 100px;
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 26px;
+        }
+        nav a{
+            margin-right: 20px;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        h1{
+            font-size: 80px;
+        }
+        h2{
+            font-size: 54px;
+            margin-top: 100px;
+        }
+        .fixed-container{
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .light-button{
+            background-color: white;
+            padding-top: 10px;
+            padding-right: 30px;
+            padding-left: 30px;
+            padding-bottom: 10px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .dark-button{
+            background-color: rgb(46, 107, 187);
+            padding-top: 10px;
+            padding-right: 30px;
+            padding-left: 30px;
+            padding-bottom: 10px;
+            border: 1px solid rgb(76, 74, 243);
+            border-radius: 5px;
+            color: white;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .first-block{
+            height: 720px;
+            background-image: url('img/man.png');
+            background-repeat: no-repeat;
+            background-position: right 10% center;
+            background-size: 837px 720px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:flex-start;
+        }
+        .first-block div{
+            font-size: 26px;
+        }
+        .services-block{
+            margin-bottom: 50px;
+        }
+        .services-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .services-container > div{
+            padding-top: 180px;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 177px;
+            font-size: 20px;
+        }
+        .service-1{
+            background-image: url('img/1.png');
+        }
+        .service-2{
+            background-image: url('img/2.png');
+        }
+        .service-3{
+            background-image: url('img/3.png');
+        }
+        .service-4{
+            background-image: url('img/4.png');
+        }
+        .portfolio-block{
+            margin-bottom: 50px;
+        }
+        .portfolio-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .portfolio-container > div{
+            padding-top: 350px;
+            background-position: left top;
+            background-repeat: no-repeat;
+            background-size: 502.61px 338.97px;
+            font-size: 20px;
+            width: 502.61px;
+            height: 338.97px;
+            margin-bottom: 20px;
+        }
+        .portfolio-1{
+            background-image: url('img/e1.png');
+            
+        }
+        .portfolio-2{
+            background-image: url('img/e2.png');
+        }
+        .portfolio-3{
+            background-image: url('img/e3.png');
+        }
+        .popup-container{
+            position: fixed;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            background-color: #000000ba;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup{
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            width: 250px;
+            position: relative;
+        }
+        .popup h2{
+            margin-top: 0px;
+            font-size: 20px;
+        }
+        .popup input{
+            display: block;
+            font-size: 18px;
+            width: 190px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+        .close-button{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 16px;
+            height: 16px;
+            background-image: url('img/close.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    </style>
+ </head>
+ <body>
+     <div class="popup-container">
+        <div class="popup">
+            <a href='#' class="close-button"></a>
+            <h2>Оставьте заявку</h2>
+             <input type="text" placeholder="Ваше имя:"> 
+             <input type="email" placeholder="Ваш e-mail:"> 
+             <button class="light-button">Отправить</button>
+        </div>
+     </div>
+  <header class="fixed-container">
+        <nav>
+            <a href="#">Услуги</a>
+            <a href="#">Портфолио</a>
+            <a href="#">Стоимость</a>
+        </nav>
+        <div> 
+            <a href="tel:+79236001878"> +7 (923) 600-18-78</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="light-button open-popup">Заказать звонок</button>
+        </div>
+  </header>>
+  <section class="fixed-container first-block">
+      <h1>Жомир Яна</h1>
+      <div>PHP-разработчик</div>
+      <button class="dark-button">Узнать больше</button>
+  </section>
+  <section class="fixed-container services-block">
+      <h2>Что я делаю</h2>
+      <div class="services-container">
+        <div class="service-1">
+            Вёрстка лендинг–страниц <br>
+            и сайтов любой сложности
+        </div>
+        <div class="service-2">
+            Адаптивная вёрстка под<br>
+            все браузеры и устройства
+        </div>
+        <div class="service-3">
+            Frontend–разработка<br>
+            и программирование
+        </div>
+        <div class="service-4">
+            Исправление и доработка<br>
+            существующей вёрстки
+        </div>
+      </div>
+      <button class="light-button open-popup">
+          Узнать стоимость
+        </button>
+  </section>
+  <section class="fixed-container portfolio-block">
+    <h2>Примеры работ</h2>
+    <div class="portfolio-container">
+      <div class="portfolio-1">
+          Сайт психолога Веры Антоновой
+      </div>
+      <div class="portfolio-2">
+          Сайт магазина детской одежды 
+      </div>
+      <div class="portfolio-3">
+          Сайт магазина «Рыболов»
+      </div>
+    </div>
+    <button class="light-button">
+        Заказать проект
+    </button>
+</section>
+ </body>
+</html> 
