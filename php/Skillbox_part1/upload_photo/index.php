@@ -7,5 +7,5 @@
         </p>
     </form>
     <div class="response"></div>
-    <script type="text/javascript" src="/js/upload.js"></script>
+    <script type="text/javascript" src="/upload_photo/js/upload.js"></script>
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . '/upload_photo/template/footer.php'); ?>

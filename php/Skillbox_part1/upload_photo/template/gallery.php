@@ -19,7 +19,7 @@ foreach ($images as $key => $image) {
             <tr class="parent_row">
                 <td>
                     <div>
-                        <img src="<?= '/upload/' . $image ?>" height='200' width='300'>
+                        <img src="<?= '/upload_photo/upload/' . $image ?>" height='200' width='300'>
                     </div>
                 </td>
                 <td>
@@ -41,4 +41,4 @@ foreach ($images as $key => $image) {
     </table>
     <input type="submit" name="delete" value="Удалить">
 </form>
-<script type="text/javascript" src="/js/gallery.js"></script>
+<script type="text/javascript" src="/upload_photo/js/gallery.js"></script>

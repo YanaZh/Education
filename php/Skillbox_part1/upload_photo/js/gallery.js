@@ -6,7 +6,7 @@ $(function () {
             files.push($(this).val());
         });
         $.post(
-            '/ajax/delete.php',
+            '/upload_photo/ajax/delete.php',
             {
                 fileNames: files,
                 delete: 'y'

@@ -1,5 +1,5 @@
 <?php
-$directory = $_SERVER['DOCUMENT_ROOT'] . '/upload/';
+$directory = $_SERVER['DOCUMENT_ROOT'] . '/upload_photo/upload/';
 
 if (isset($_POST['fileNames'], $_POST['delete'])) {
     $filesArray = array_diff(scandir($directory), ['..', '.']);

@@ -1,6 +1,6 @@
 $(function () {
     $("input[name=upload]").on("click", function (event) {
-        event.preventDefault();
+        event.preventDefault(); //остановить событие по умолчанию
 
         var files = document.querySelector("input[type=file]").files;
         var filesCount = files.length;
@@ -15,7 +15,7 @@ $(function () {
         data.append('upload', 'y');
 
         $.ajax({
-            url: '/ajax/upload.php',
+            url: '/upload_photo/ajax/upload.php',
             type: 'post',
             cache: false,
             contentType: false,

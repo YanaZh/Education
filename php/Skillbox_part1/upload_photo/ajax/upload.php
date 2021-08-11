@@ -1,6 +1,6 @@
 <?php
 $success = false;
-$uploadPath = $_SERVER['DOCUMENT_ROOT'] . '/upload/';
+$uploadPath = $_SERVER['DOCUMENT_ROOT'] . '/upload_photo/upload/';
 $maxCount = 5;
 $maxSize = 5242880;
 $allowedTypes = ['image/jpg', 'image/png', 'image/jpeg'];
@@ -9,17 +9,17 @@ if (isset($_POST['upload']) && !empty($_FILES['image'])) {
     if (count($_FILES['image']['name']) < $maxCount) {
         $maxCount = count($_FILES['image']['name']);
     }else {
-        require($_SERVER['DOCUMENT_ROOT'] . '/include/error_count.php');
+        require($_SERVER['DOCUMENT_ROOT'] . '/upload_photo/include/error_count.php');
     }
     for ($i = 0; $i < $maxCount; $i++) {
         if ($_FILES['image']['size'][$i] > $maxSize) {
             $_FILES['image']['error'][$i] = 1;
-            require($_SERVER['DOCUMENT_ROOT'] . '/include/error_size.php');
+            require($_SERVER['DOCUMENT_ROOT'] . '/upload_photo/include/error_size.php');
             continue;
         }
         if (!in_array($_FILES['image']['type'][$i], $allowedTypes, true)) {
             $_FILES['image']['error'][$i] = 2;
-            require($_SERVER['DOCUMENT_ROOT'] . '/include/error_type.php');
+            require($_SERVER['DOCUMENT_ROOT'] . '/upload_photo/include/error_type.php');
             continue;
         }
         if ($_FILES['image']['error'][$i] === 0) {
@@ -36,8 +36,8 @@ if (isset($_POST['upload']) && !empty($_FILES['image'])) {
         }
     }
     if ($success) {
-        require($_SERVER['DOCUMENT_ROOT'] . '/include/success.php');
+        require($_SERVER['DOCUMENT_ROOT'] . '/upload_photo/include/success.php');
     } else {
-        require($_SERVER['DOCUMENT_ROOT'] . '/include/error.php');
+        require($_SERVER['DOCUMENT_ROOT'] . '/upload_photo/include/error.php');
     }
 }
